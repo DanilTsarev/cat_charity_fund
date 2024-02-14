@@ -25,7 +25,8 @@ async def make_donation(
 
 
 async def distribute_donation(
-    obj_in: AbstractBase, obj_db: AbstractBase
+    obj_in: AbstractBase,
+    obj_db: AbstractBase
 ) -> Set[AbstractBase]:
     calc_obj_in = obj_in.full_amount - obj_in.invested_amount
     calc_obj_db = obj_db.full_amount - obj_db.invested_amount
